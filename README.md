@@ -1,4 +1,4 @@
-# dojo-blog
+# Memet Project
 
 ## Project setup
 ```
