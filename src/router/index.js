@@ -1,20 +1,61 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomePage from '../views/HomePageView.vue'
+import FirstPage from '../views/FirstPageView.vue'
+import LogPage from '../views/LogPageView.vue'
+import UserPage from '../components/UserPage/UserPage.vue'
+import AdminPage from '../components/AdminPage/AdminPage.vue'
+import InfoPage from '../components/InfoPage/InfoPage.vue'
+import MainPage from '../components/MainPage/MainPage.vue'
+
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/login',
+    name: 'login',
+    component:LogPage
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/signup',
+    name: 'signup',
+    component:LogPage
+  },
+  {
+    path: '/home',
+    name: 'homepage',
+    component: HomePage
+  },
+  {
+    path:'/first',
+    name:'firstpage',
+    component:FirstPage
+  },
+  {
+    path:'/logpage',
+    name:'logpage',
+    component:LogPage
+  },
+  {
+    path:'/user',
+    name:'UserPage',
+    component:UserPage
+  },
+  {
+    path:'/admin',
+    name:'AdminPage',
+    component:AdminPage
+  },
+  {
+    path:'/info',
+    name:'InfoPage',
+    component:InfoPage
+  },
+  {
+    path:'/main',
+    name:'MainPage',
+    component:MainPage
   }
+
+  
 ]
 
 const router = createRouter({
